@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600;700;800&display=swap');
+/* HOJA DE ESTILOS CSS*/
+*{margin:0;padding:0;box-sizing: border-box;scroll-behavior: smooth;}
+
+body{
+    background-color:var(--color-clan);
+    font-family: 'Kanit', sans-serif;
+
+}
+.content{
+    width:90%;
+    margin:auto;
+    background-color: var(--color-clan);
+}
+
+/* HEADER */
+header.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+header h1{
+    text-shadow: 2px 2px 3px var(--color-primario);
+}
+header img{
+    min-width: 200px;width:15vw;
+}
+.header-texto{
+    max-width: 50%;
+    padding:20px;
+}
+/* MAIN */
+main {
+    text-align: center;
+    padding:25px 0;
+    box-shadow: 2px 2px 5px var(--color-secundario) ;
+    background-color: var(--color-primario);
+}
+/* ###### fichas flex ###### */
+/* fichas actúa como contenedor flex
+horiontal distribuyendo cada ficha en la pág*/
+.fichas {
+    display: flex;
+    padding:0 25px;
+    background-color: var(--color-primario);
+
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+/**** datos de cada ficha *****/
+.ficha{
+    text-align: center;
+    z-index:1;
+
+}
+.ficha img{
+    box-shadow: 2px 2px 8px rgb(0, 0, 0) ;
+}
+.ficha .picture{
+    position:relative;
+}
+.ficha h2{
+    text-shadow: 1px 1px 2px var(--color-clan);
+}
+.ficha h3{
+    color:var(--color-clan);
+}
+.ficha .picture .puntos{
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    position:absolute;
+    bottom:2.5%;
+    right:3%;
+    width:50px;
+    height:50px;
+    background-color: rgba(255, 255, 255, 0.849);
+    border: 6px solid var(--color-clan);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0) ;
+    border-radius: 50%;
+    z-index:2;
+}
+.lider .picture .puntos{
+    right:3%;
+    bottom:2.5%;
+    width:calc(var(--tam-puntos)*1.2);
+    height: calc(var(--tam-puntos)*1.2);
+    border: 8px solid var(--color-clan);
+    line-height: calc(var(--tam-puntos)*0.9);
+    font-size: 25px;
+}
+.secundario .picture .puntos{
+    width:calc(var(--tam-puntos)*0.7);
+    height: calc(var(--tam-puntos)*0.7);
+    border: 4px solid var(--color-clan);
+    line-height: calc(var(--tam-puntos)*0.55);
+    right:13%;
+    bottom:3%;
+    font-size: 15px;
+}
+.puntos{
+    font-weight: bolder;
+}
+
+article{
+    padding:20px 0;
+}
+/* tipos de fichas*/
+.lider{
+    flex:0 1 400px;
+    order: 2;
+}
+.lider img{
+    width:100%;
+    border: 15px solid var(--color-clan);
+    box-shadow: 4px 4px 8px  rgb(0, 0, 0)  ;
+}
+.principal{
+    flex:0 1 300px;
+    margin-top: 118px;
+}
+.principal:first-of-type{
+    order:1;
+}
+.principal:last-of-type{
+    order:3;
+}
+.principal img{
+    width:100%;
+    border: 10px solid var(--color-clan);
+    background-color: var(--color-clan);;
+}
+.secundario{
+    flex:0 1 200px;
+    background-color: var(--color-clan);
+}
+.secundario img{
+    width:80%;
+    border: 0.4vw solid var(--color-primario);
+    background-color: var(--color-clan);;
+}
+.secundario h3{
+    color:var(--color-primario);
+}
+.miniatura img{
+    width:80%;
+    max-width: 150px;
+}
+
+/*** skill ***/
+.lider table{
+    width: 70%;
+    display:inline-table;
+}
+.principal table{
+    width:90%;
+    display:inline-table;
+}margin
+table{
+    margin:auto;
+     
+}
+table td{
+    margin:0; padding:0;
+}
+table .progress-item{
+    width: 80%;
+    padding-right: 5px;
+}
+
+  /* COLORES */
+.fondo{
+    background-color: var(--color-primario);
+}
+ .estadisticas{
+    background-color: var(--color-primario);
+} 
+
+  progress {
+    position:relative;
+    width: 100%;
+    padding:2px;
+    height: 15px;
+    
+  }
+  progress::-webkit-progress-bar {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  progress::-webkit-progress-value {
+    background-color: var(--color-clan);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.8);
+  }
+  progress::-moz-progress-bar{
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+  }
+  .secundario progress::-webkit-progress-value {
+    background-color: var(--color-primario);
+  }
+  progress::after{
+    position:absolute;
+
+  }
+/* ### estadisticas ### */
+.estadisticas {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.estadisticas h1{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+
+}
+.clasificacion{
+    flex-basis: calc(20% - 20px); 
+    margin: 10px;
+
+}
+
+.clasificacion li{
+    justify-content: center;
+}
+  
+/* ### parte final grupos ### */
+/* contiene varios grupos en disposición vertical*/
+.grupos{
+    background-color: var(--color-secundario);;
+    color: white;
+    display: flex;
+    height: 400px;
+}
+.grupo{
+    display: flex;
+    border-bottom: 1px solid red;
+    background-color: aqua;
+}
+.grupo h2{
+}
+.grupos h1, .grupo h2{
+}
+.lista{
+}
+footer{
+}
+footer p{
+}
